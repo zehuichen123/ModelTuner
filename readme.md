@@ -10,6 +10,7 @@ This is a web app which enables you to tune your model through PC and Mobile sim
 
 Some key point if you want to apply this framework to your work:
 - Choose your matric for your model and write them into to one .csv file at each print time where can be read by flask.
+
 - Expose your model trial with one interface say `start_trial()`.
     ```python
     num_runs = 10
@@ -19,8 +20,13 @@ Some key point if you want to apply this framework to your work:
         for i in range(num_runs):
             model.run(data)
     ```
+    
 - Call your `start_trial` function at `back_end/app/run.py`.
-- Customize your format of results shown in the front-end and rewrite function `data()`,`table()` and class `Data` in `back_end/app/run.py`. You may also need to change some files in Vue.js project. :) So actually this project probably used by myself. If you want your own model tuner, I strongly suggest you write one on your own. It only takes you one night :).
+
+- Customize your format of results shown in the front-end and rewrite function `data()`,`table()` and class `Data` in `back_end/app/run.py`. You may also need to change some files in Vue.js project. :)
+
+
+So actually this project probably used by myself. If you want your own model tuner, I strongly suggest you write one on your own. It will only take you one night :).
 
 ### About
 The whole framework is quite simple since the motivation of this application is to enable me to choose different parameters and check results and then choose again on the phone. I don't need to sit in front of table and watch my screen: epoch 1, epoch 2, epoch ....
