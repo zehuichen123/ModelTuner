@@ -12,7 +12,7 @@ Vue.use(VCharts)
 
 import axios from 'axios'
 Vue.prototype.axios = axios;
-axios.defaults.baseURL = 'http://0.0.0.0:5001/';
+axios.defaults.baseURL = 'http://45.32.146.44:5001/';
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);

@@ -9,7 +9,7 @@
         <el-input v-model="form.epoch_num"></el-input>
       </el-form-item>
       <el-form-item class="small-margin" label="Learning Rate">
-        <el-input v-model="form.learning_rate"></el-input>
+        <el-input v-model="form.lr"></el-input>
       </el-form-item>
       <el-form-item class="small-margin" label="Coef1">
         <el-input v-model="form.coef1"></el-input>
@@ -38,7 +38,7 @@
         form : {
           layer: "120 60 30 10 1",
           epoch_num: "100",
-          learning_rate: "0.001",
+          lr: "0.001",
           coef1: "1",
           coef2: "1",
           K: "3",
@@ -78,7 +78,7 @@
       },
       startRun(){
         let _self = this;
-        _self.axios.post('/start', {config: _self.config})
+        _self.axios.post('/start', _self.form)
           .then(function(res){
             if(res.status === 200){
               _self.success_run();
@@ -114,6 +114,6 @@
 
 <style scoped>
   .small-margin{
-    margin: 4px;
+    margin-bottom: 4px !important;
   }
 </style>

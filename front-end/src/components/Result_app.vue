@@ -29,13 +29,12 @@
       </el-table-column>
     </el-table>
     <el-pagination
-      background
+      small
       layout="prev, pager, next"
       :total="total_size"
       :current-page="curr_page"
       :page-size="page_size"
       @current-change="update_page">
-    </el-pagination>
     </el-pagination>
   </div>
 </template>

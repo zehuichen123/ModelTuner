@@ -3,7 +3,7 @@
     <h3>Visualization</h3>
     <ve-line :data="chartData"></ve-line>
     <el-pagination
-      background
+      small
       layout="prev, pager, next"
       :total="chartData.num_records"
       :page-size="1"
